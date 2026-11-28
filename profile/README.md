@@ -26,11 +26,11 @@ flight. It also writes hOCR, ALTO, PAGE XML and searchable PDF.
 [**fullerene-1.1-3M**](https://huggingface.co/CarbonResearchLabs/fullerene-1.1-3M) are its Latin model sets, for Latin,
 Cyrillic and Greek: four networks with 2.77 M parameters in all, trained from scratch, for page orientation, line
 detection, line recognition, and reading order with block labels and table cells, and character language models that
-read again the lines the recognizer is unsure of. Read by Carbon-OCR on all 2,937 pages of OmniParseBench,
-fullerene-1.1-3M scores a headline of **54.00** (55.15 with its 7-gram) and fullerene-3M **53.0**, where Tesseract 5.5
-scores 5.9. On one core of a desktop's CPU fullerene-1.1-3M reads 10.59 pages a second and Tesseract 0.92:
-fullerene-1.1-3M is **11.5 times as fast**. Tesseract still reads OmniDocBench's plain text better (an edit distance of
-0.129, against fullerene-1.1-3M's 0.151 and fullerene-3M's 0.164).
+read again the lines the recognizer is unsure of. Read by Carbon-OCR on all 2,937 pages of OmniParseBench 1.8,
+fullerene-1.1-3M with its 7-gram scores a headline of **63.74**; on olmOCR-Bench's 1,403 PDFs it scores
+**52.7**, where Tesseract 5.5 scores 34.2. Greedy, it reads **114.0 pages a second** on 30 cores of an AMD
+Threadripper 3970X, and 4.19 on one. Tesseract still reads OmniDocBench's plain text better (an edit distance of
+0.129, against fullerene-1.1-3M's 0.147).
 
 [**fullerene-data**](https://huggingface.co/datasets/CarbonResearchLabs/fullerene-data) records the training data
 source by source: where each came from, its license, and every file's checksum.
